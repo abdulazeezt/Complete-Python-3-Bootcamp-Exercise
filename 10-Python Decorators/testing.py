@@ -18,6 +18,6 @@ def printdecorator(intakefunc):
 
 def div(a,b):
     return a/b
-#print("Hello World")
+    print("Hello World")
 
 div(3,5)
