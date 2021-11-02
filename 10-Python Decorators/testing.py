@@ -1,23 +1,18 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 
-def printtest():
-    print("Hello")
+def check(func):
+    def inside(a, b):
+        if b == 0:
+            print("Can't divide by 0")
+            return
+        return func(a, b)
+    return inside
 
 
-
-def printdecorator(intakefunc):
-    def wrapperfunc():
-        print("Before decoration")
-        intakefunc()
-        print("after the docoration")
+@check
+def div(a, b):
+    return a / b
 
 
-
-##############----------
-
-def div(a,b):
-    return a/b
-    print("Hello World")
-
-div(3,5)
+print(div(10, 0))
