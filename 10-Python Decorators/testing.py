@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-
+#!/usr/bin/env python
 
 def check(func):
     def inside(a, b):
@@ -9,10 +8,8 @@ def check(func):
         return func(a, b)
     return inside
 
-
 @check
 def div(a, b):
     return a / b
-
 
 print(div(10, 0))
